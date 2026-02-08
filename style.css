@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "CWC";
+  src: url("fonts/CWC-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "CWC";
+  src: url("fonts/CWC-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "CWC";
+  src: url("fonts/CWC-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "CWC";
+  src: url("fonts/CWC-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body {
+    min-height: 100vh;
+    background-color: #140214;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* logo */
+.icc-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  z-index: 10;
+}
+
+.icc-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* LEFT LIGHTNING */
+.lightning-left {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 200px;
+    transform: scaleX(-1);
+}
+
+/* RIGHT LIGHTNING */
+.lightning-right {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 200px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* live */
+
+.live-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255, 0, 60, 0.85);
+  backdrop-filter: blur(6px);
+  font-family: "CWC";
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 0, 60, 0.6);
+  z-index: 10;
+}
+
+/* Blinking Dot */
+.dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Center Nav Container */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 26px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  padding: 8px 24px;
+  border-radius: 22px;
+  font-family: "CWC", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* Individual Tabs */
+.nav-item {
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Active Tab */
+.nav-item.active {
+  color: #ffffff;
+}
+
+/* Hover */
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.main-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+
+/* Tag Line */
+.tag-line h1 {
+  font-family: "CWC", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg,rgba(255, 145, 0, 1) 0%, rgba(234, 0, 162, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 6px;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.65);
+}
+
+.sub-tag {
+  display: block;
+  font-family: "CWC", sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 26px;
+}
+
+/* Score Card */
+.score-card {
+  display: inline-block;
+  /* background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.45)); */
+  background-color: #1d0e1b;
+  padding: 18px 40px;
+  border-radius: 18px;
+  font-family: "CWC", sans-serif;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+}
+
+.team-score {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.overs {
+  font-size: 16px;
+  margin: 6px 0;
+  opacity: 0.85;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  pointer-events: none;
+}
+
+/* Disclaimer */
+.disclaimer {
+  position: absolute;
+  bottom: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "CWC", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 5;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tag-line h1 {
+    font-size: 18px;
+  }
+  .sub-tag {
+    font-size: 10px;
+  }
+  .team-score {
+    font-size: 24px;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .lightning-left,
+    .lightning-right {
+    width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .icc-logo {
+    width: 150px;
+    top: 15px;
+    left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+  .live-badge {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .disclaimer {
+    font-size: 9px;
+    bottom: 45px;
+  }
+}
