@@ -1,16 +1,33 @@
 // SET NEXT INDIA MATCH DATE & TIME
 // Format: YYYY-MM-DDTHH:MM:SS
-const matchTime = "2026-02-11T19:00:00";
+const matchTime = "2026-02-12T19:00:00";
+
+// Match live link (scorecard / live stream)
+const matchLink = "https://tinyurl.com/indvsnam";
 
 function startCountdown() {
   const target = new Date(matchTime).getTime();
 
-  setInterval(() => {
+  const timer = setInterval(() => {
     const now = Date.now();
     const diff = target - now;
 
     if (diff <= 0) {
-      document.getElementById("countdown").innerText = "MATCH STARTED";
+      clearInterval(timer);
+
+      document.getElementById("match-title").innerText =
+        "INDIA MATCH IS STARTED";
+
+      document.getElementById("countdown").classList.add("hidden");
+
+      const btn = document.getElementById("live-btn");
+      btn.classList.remove("hidden");
+      btn.href = matchLink;
+
+      const badge = document.getElementById("liveBadge");
+      badge.classList.add("live");
+      badge.innerHTML = `<span class="dot"></span> LIVE`;
+
       return;
     }
 

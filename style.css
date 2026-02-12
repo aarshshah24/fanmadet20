@@ -236,6 +236,38 @@ footer {
 }
 
 
+.hidden {
+  display: none;
+}
+
+/* Live Button */
+.live-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 22px;
+  background: linear-gradient(90deg,#ff004c,#ff6a00);
+  color: white;
+  font-family: "CWC", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(255,0,80,0.6);
+  transition: 0.3s ease;
+}
+
+.live-btn:hover {
+  transform: scale(1);
+  box-shadow: 0 0 30px rgba(255,0,80,0.9);
+}
+
+/* Live badge active */
+.live-badge.live {
+  background: rgba(0, 255, 140, 0.85);
+  box-shadow: 0 0 12px rgba(0, 255, 140, 0.8);
+}
+
+
 /* Mobile */
 @media (max-width: 768px) {
   .tag-line h1 {

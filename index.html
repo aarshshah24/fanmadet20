@@ -22,9 +22,9 @@
   </div> -->
 
   <!-- live badge -->
-  <div class="live-badge">
-    <span class="dot"></span>
-    OFFLINE
+  <div class="live-badge" id="liveBadge">
+  <span class="dot"></span>
+  OFFLINE
   </div>
 
 </header>
@@ -34,16 +34,24 @@
   <!-- Tagline -->
   <div class="tag-line">
     <span class="sub-tag">ICC MEN'S T20 WORLD CUP 2026</span>
-    <h1>INDIA NEXT MATCH START IN</h1>
+    <h1 id="match-title">INDIA NEXT MATCH START IN</h1>
   </div>
 
   <br>
 
   <!-- Score Card -->
   <div class="score-card">
-     <div class="countdown" id="countdown">
-      00D : 00H : 00M : 00S
-    </div>
+
+  <!-- Countdown -->
+  <div class="countdown" id="countdown">
+    00D : 00H : 00M : 00S
+  </div>
+
+  <!-- Live Button (Hidden initially) -->
+  <a id="live-btn" class="live-btn hidden" target="_blank">
+    🔴 VIEW LIVE SCORE
+  </a>
+
   </div>
 
 </div>
