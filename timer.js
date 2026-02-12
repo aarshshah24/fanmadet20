@@ -1,9 +1,9 @@
 // SET NEXT INDIA MATCH DATE & TIME
 // Format: YYYY-MM-DDTHH:MM:SS
-const matchTime = "2026-02-12T19:00:00";
+const matchTime = "2026-02-15T19:19:00";
 
 // Match live link (scorecard / live stream)
-const matchLink = "https://tinyurl.com/indvsnam";
+const matchLink = "https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/matches/268086/india-vs-pakistan";
 
 function startCountdown() {
   const target = new Date(matchTime).getTime();

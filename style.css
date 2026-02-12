@@ -267,6 +267,11 @@ footer {
   box-shadow: 0 0 12px rgba(0, 255, 140, 0.8);
 }
 
+.countdown{
+  font-size: x-large;
+  font-weight: bold;
+}
+
 
 /* Mobile */
 @media (max-width: 768px) {
